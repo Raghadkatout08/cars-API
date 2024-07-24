@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %} Details - Cars {% endblock %}
+
+{% block content %}
+    <div class="welcome">
+        <h1>Welcome to the Car Details</h1>
+        <table>
+            <tr>
+                <th>Model</th>
+                <td>{{ car.model }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ car.brand }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ car.price }}</td>
+            </tr>
+            <tr>
+                <th>Is bought?</th>
+                <td>{{ car.is_bought }}</td>
+            </tr>
+            <tr>
+                <th>Buy Time</th>
+                <td>{{ car.buy_time }}</td>
+            </tr>
+        </table>
+
+        <button><a href="{% url 'car_update' car.pk %}"> Update </a></button>
+        <button><a href="{% url 'car_delete' car.pk %}"> Delete </a></button>
+
+        <div class="action-buttons">
+            <a href="{% url 'car_list' %}" class="button">Back</a>
+        </div>
+    </div>
+{% endblock %}

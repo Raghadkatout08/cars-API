@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} List - Cars {% endblock %}
+
+{% block content %}
+    <div class="welcome">
+        <h1>Welcome to the Cars List</h1>
+
+        <ul>
+            {% for car in cars_object %}
+                <li>
+                    <h3> Model:  {{ car.model }} </h3>
+                    <h4> - Brand: {{ car.brand }} </h4>
+                    <div class="action-buttons special-buttons">
+                        <a href="{% url 'car_detail' car.pk %}" class="button button-details">View Details</a>
+                        <a href="http://127.0.0.1:8003/api/v1/cars_api/cars/{{ car.pk }}/" class="button button-api">View API Details</a>
+                    </div>                                    
+                </li>
+            {% endfor %}
+        </ul>
+
+        <br><br><br>
+        
+        <div class="action-buttons">
+            <a href="{% url 'car_create' %}" class="button">Create New Car</a>
+            <a href="{% url 'home' %}" class="button">Back to Home Page</a>
+        </div> 
+    </div>
+{% endblock %}

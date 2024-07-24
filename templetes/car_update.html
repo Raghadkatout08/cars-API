@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} Update - Cars{% endblock %}
+
+{% block content %}
+    <div class="welcome">
+        <h1>Welcome to the Cars Update</h1>
+        <form method="post">
+            {% csrf_token %} 
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+        <div class="action-buttons">
+            <a href="{% url 'car_detail' car.pk %}" class="button">Back</a>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Car Store{% endblock %}
+
+{% block content %}
+    <div class="home-container">
+        <h1>Welcome to the Car Store</h1>
+        <p class="intro-text">Manage your car records easily with our system. Navigate through the options to add, update, or delete car entries efficiently.</p>
+        <div class="action-buttons">
+            <a href="{% url 'car_list' %}" class="button">Browse Cars on Website</a>
+            <a href="/api/v1/cars_api/cars/" class="button">Browse Cars via API</a>
+        </div>
+    </div>
+{% endblock %}
