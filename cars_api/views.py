@@ -10,7 +10,6 @@ from django.urls import reverse_lazy
 class HomePageView(TemplateView):
     template_name = 'home.html'
 
-
 class CarListView(ListView):
     model = Car
     template_name = 'car_list.html'
@@ -38,7 +37,6 @@ class CarDeleteView(DeleteView):
 class CarCreateListView(generics.ListCreateAPIView):
     queryset = Car.objects.all()
     serializer_class = CarSerializers
-
 
 class CarDetailsView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Car.objects.all()
