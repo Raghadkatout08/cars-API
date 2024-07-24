@@ -13,7 +13,7 @@
                     <h4> - Brand: {{ car.brand }} </h4>
                     <div class="action-buttons special-buttons">
                         <a href="{% url 'car_detail' car.pk %}" class="button button-details">View Details</a>
-                        <a href="http://127.0.0.1:8003/api/v1/cars_api/cars/{{ car.pk }}/" class="button button-api">View API Details</a>
+                        <a href="/api/v1/cars_api/cars/{{ car.pk }}/" class="button button-api">View API Details</a>
                     </div>                                    
                 </li>
             {% endfor %}
