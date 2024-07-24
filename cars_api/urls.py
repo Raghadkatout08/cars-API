@@ -1,8 +1,5 @@
 from django.urls import path
-from .views import (
-    HomePageView, CarListView, CarDetailView, CarCreateView, CarUpdateView,
-    CarDeleteView, CarCreateListView, CarDetailsView
-)
+from .views import  HomePageView, CarListView, CarDetailView, CarCreateView, CarUpdateView, CarDeleteView, CarCreateListView, CarDetailsView
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
