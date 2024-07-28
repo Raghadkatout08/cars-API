@@ -52,3 +52,22 @@ The Cars API is a Django-based application designed to manage car listings. It p
 ### Running Tests
 To run the tests, execute:
     ```python manage.py test```
+
+### Running Tests
+If you prefer to run the application using Docker, follow these steps:
+1. ** Build the Docker image:**
+   ```bash
+   docker build -t cars-api .
+
+2. **Run the Docker container:**
+   ```bash
+   docker run -it -p 8000:8000 cars-api
+
+3. **Use Docker Compose:**
+   ```bash
+   docker compose up
+
+   
+
+
+
