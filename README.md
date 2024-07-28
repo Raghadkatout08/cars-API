@@ -28,24 +28,24 @@ The Cars API is a Django-based application designed to manage car listings. It p
    git clone git@github.com:Raghadkatout08/cars-API.git
 
 
-2. **Create and activate a virtual environment:**
+2. **Create and activate a virtual environment**
     ```bash
     python -m venv .venv
     source .venv/bin/activate   # On Windows use `.venv\Scripts\activate`
 
-3. **Install the dependencies:**
+3. **Install the dependencies**
     ```bash
     pip install -r requirements.txt
 
-4. **Apply migrations:**
+4. **Apply migrations**
     ```bash
     python manage.py migrate
     
-5. **Create a superuser:**
+5. **Create a superuser**
     ```bash
     python manage.py createsuperuser
 
-6. **Run the server:**
+6. **Run the server**
     ```bash
     python manage.py runserver
 
@@ -55,15 +55,15 @@ To run the tests, execute:
 
 ### Running Tests
 If you prefer to run the application using Docker, follow these steps:
-1. ** Build the Docker image:**
+1. **Build the Docker image**
    ```bash
    docker build -t cars-api .
 
-2. **Run the Docker container:**
+2. **Run the Docker container**
    ```bash
    docker run -it -p 8000:8000 cars-api
 
-3. **Use Docker Compose:**
+3. **Use Docker Compose**
    ```bash
    docker compose up
 
