@@ -66,8 +66,3 @@ If you prefer to run the application using Docker, follow these steps:
 3. **Use Docker Compose**
    ```bash
    docker compose up
-
-   
-
-
-
